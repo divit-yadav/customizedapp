@@ -1,0 +1,44 @@
+.cards-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; /* Centers cards */
+    flex-wrap: wrap; /* Ensures responsiveness */
+    margin-top: 20px;
+}
+
+.card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 32px;
+    margin: 10px;
+    text-align: center;
+    max-width: 280px;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    gap: 20px;
+}
+
+/* Hover effect */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card h2 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.card h3 {
+    font-size: 16px;
+    color: #929292;
+}
+
+.card-image {
+    width: 100%;
+    aspect-ratio: 1 / 1; /* Forces a square shape */
+    object-fit: cover; /* Ensures it fills without stretching */
+    background-color: white; /* Prevents black bars if transparency is the issue */
+  }
+  
