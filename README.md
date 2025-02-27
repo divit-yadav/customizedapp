@@ -1,4 +1,5 @@
-# Getting Started with Create React App
+#  Design system (work in progress)
+Stay tuned for final updates.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
