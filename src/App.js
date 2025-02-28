@@ -9,16 +9,21 @@ import './index.css';
 import TogglerHeading from './components/TogglerHeading';
 import ModeToggler from './components/ModeToggler';
 
-
-
 function App() {
-
-   const [word, setWord] = React.useState('Dark Mode');
+   // Initialize state from localStorage or default to 'Dark Mode'
+   const [word, setWord] = React.useState(() => {
+     const savedMode = localStorage.getItem('mode');
+     return savedMode || 'Dark Mode';
+   });
   
     function toggleMode() {
-      setWord(prevMode => (prevMode === 'Dark Mode' ? 'Light Mode' : 'Dark Mode'));
+      setWord(prevMode => {
+        const newMode = prevMode === 'Dark Mode' ? 'Light Mode' : 'Dark Mode';
+        // Save to localStorage whenever mode changes
+        localStorage.setItem('mode', newMode);
+        return newMode;
+      });
     }
-
 
   return (
     <div className="App">
